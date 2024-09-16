@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Convertir una Cadena a Mayúsculas</h1>
+
+    <label for="texto">Introduce una cadena de texto:</label>
+    <input type="text" id="texto">
+    <button onclick="convertirMayusculas()">Convertir</button>
+
+    <p id="resultado"></p>
+
+    <script>
+  function convertirMayusculas() {
+        let texto = document.getElementById("texto").value;
+        let resultado = '';
+
+        for (let i = 0; i < texto.length; i++) {
+            let char = texto[i];
+            let codigo = char.charCodeAt(0);
+
+        
+            if (codigo >= 97 && codigo <= 122) {
+                resultado += String.fromCharCode(codigo - 32);
+            } else {
+                resultado += char; 
+            }
+        }
+
+        document.getElementById("resultado").textContent = "El texto en mayúsculas es: " + resultado;
+    }
+    </script>
+</body>
+</html>

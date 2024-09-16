@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>factorial de número</title>
+</head>
+
+<body>
+    <h1>factorial</h1>
+    <input type="number" id="numeroIngresado" placeholder="Ingrese un número">
+    <button onclick="calcularFactorial()">Calcular</button>
+    <p id="textoResultado"></p>
+
+    <script>
+        function calcularFactorial() {
+            let numero = document.getElementById("numeroIngresado").value;
+            let resultado = 1;
+            
+            for (let i = 1; i <= numero; i++) {
+                resultado = resultado * i;
+            }
+
+            document.getElementById('textoResultado').innerHTML = `El factorial del número ${numero} es: ${resultado}`;
+        }
+    </script>
+</body>
+
+</html>

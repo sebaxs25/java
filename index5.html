@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Determinar Longitud de una Cadena</h1>
+
+    <label for="texto">Introduce una cadena de texto:</label>
+    <input type="text" id="texto">
+    <button onclick="calcularLongitud()">Calcular Longitud</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function calcularLongitud() {
+
+            let texto = document.getElementById("texto").value;
+
+            let longitud = texto.length;
+
+   
+            document.getElementById("resultado").textContent = "La longitud de la cadena es: " + longitud;
+        }
+    </script>
+</body>
+</html>

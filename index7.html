@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma de Números</title>
+</head>
+
+<body>
+    <h1>Suma de Números</h1>
+    <button onclick="mostrarResultado()">Ingresa tus Números</button>
+    <p id="resultado"></p>
+    <script >
+        function mostrarResultado() {
+            var entrada = window.prompt("Ingrese los números separados por comas (Ej: 1,2,3)");
+            
+            if (!entrada) {
+                document.getElementById('resultado').innerText = 'si no ingresas numero no funciono';
+                return;
+            }
+
+            var numeros = entrada.split(',').map(Number);
+            var suma = numeros.reduce((a, b) => a + b, 0);
+            
+            document.getElementById('resultado').innerText = 'La suma de los números es: ' + suma;
+        }
+    </script>
+</body>

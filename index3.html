@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Encuentra el mayor número</h1>
+
+    <label for="numeros">Ingresa números separados por comas:</label>
+    
+    <input type="text" id="numeros" placeholder="Ej: 10, 45, 32, 76, 28">
+   
+    <button onclick="encontrarMayor()">Encontrar mayor número</button>
+
+    <p id="resultado"></p>
+
+    <script>
+
+            function encontrarMayor() {
+        let numeros = document.getElementById("numeros").value;
+        let arreglo = numeros.split(',');
+        let mayor = parseFloat(arreglo[0]); 
+
+        for (let i = 1; i < arreglo.length; i++) {
+            let num = parseFloat(arreglo[i]); 
+            
+
+            if (num > mayor) {
+                mayor = num;
+            }
+        }
+
+        document.getElementById("resultado").textContent = "El número mayor es: " + mayor;
+    } 
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Calcular Promedio</h1>
+    <input type="text" id="numerosIngresados" placeholder="Ingrese números separados por comas">
+    <button onclick="calcularPromedio()">Calcular Promedio</button>
+    <p id="resultado"></p>
+    <script>
+function calcularPromedio() {
+           
+            var entrada = document.getElementById("numerosIngresados").value;
+            var numeros = entrada.split(',').map(Number);   
+            var suma = numeros.reduce((acc, num) => acc + num, 0);
+            var promedio = suma / numeros.length;
+
+    document.getElementById('resultado').innerText = `El promedio es: ${promedio}`;
+    }
+    </script>
+</body>
+
+</html>
